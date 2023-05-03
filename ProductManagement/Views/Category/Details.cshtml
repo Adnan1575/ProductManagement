@@ -1,0 +1,42 @@
+﻿@model CategoryInfo
+@{
+    ViewData["Title"] = "AddEditcategory";
+}
+
+<h1>Add\Editcategory</h1>
+
+
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-3">Title</div>
+            <div class="col-md-9"> @Model.CategoryTitle </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">Group Name</div>
+            <div class="col-md-9">
+               @Model.GroupName
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">Status</div>
+            <div class="col-md-9">
+              @Model.CategoryStatus
+            </div>
+
+        </div>
+    <form asp-action="Delete">
+        <div class="row mb-3">
+            <input type="hidden" asp-for="Category_Id" />
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <input type="submit" value="Delete" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-danger">Back to List</a>
+            </div>
+
+        </div>
+    </form>
+    </div>
+

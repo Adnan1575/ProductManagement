@@ -1,0 +1,43 @@
+﻿@model CategoryInfo
+@{
+    ViewData["Title"] = "AddEditcategory";
+}
+
+<h1>Add\Editcategory</h1>
+<form asp-action="Create">
+
+    <div class="container">
+        <input type="hidden" asp-for="Category_Id" />
+        <div class="row mb-3">
+            <div class="col-md-3">Title</div>
+            <div class="col-md-9">
+                <input type="text" asp-for="CategoryTitle" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">Product Name</div>
+            <div class="col-md-9">
+                <input type="text" asp-for="GroupName" class="form-control" />
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-3">Price</div>
+            <div class="col-md-9">
+                <input type="text" asp-for="CategoryStatus" class="form-control" />
+            </div>
+
+        </div>    
+        <div class="row mb-3">
+            <div class="col-md-3"></div>
+            <div class="col-md-9">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-danger">Back to List</a>
+            </div>
+
+        </div>
+    </div>
+</form>
